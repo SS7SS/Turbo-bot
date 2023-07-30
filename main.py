@@ -22,7 +22,7 @@ from pyrogram.types import InlineKeyboardMarkup
 kid = 26965358
 khash = "0ef9b3131e2168949a634b7d5014290f"
 
-bot = "6016537523:AAHc65PKZGMk6PIO0bxlr10_yEp4oFmg6ws"
+bot = os.environ.get("token")
 
 app = Client("jfd", api_id=kid, api_hash=khash, bot_token=bot)
 
