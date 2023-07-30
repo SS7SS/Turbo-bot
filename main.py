@@ -30,7 +30,7 @@ ac = Client("tg", api_id=kid, api_hash=khash)
 
 @app.on_message(filters.command("start"))
 async def m(app,msg):
-	await app.send_video(msg.chat.id, "https://t.me/V_0_E2/259", caption=f"""**Welcome .
+	await app.send_video(msg.chat.id, "https://telegra.ph/file/70b26b23a9febd3e34f3d.mp4", caption=f"""**Welcome .
 This BoT Checker TeLeGram 🐊 
 ||ProGmMer : [hussien](https://t.me/hussien_pyrogram) .||**""", reply_markup=ReplyKeyboardMarkup(
     [[
