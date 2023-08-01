@@ -478,8 +478,8 @@ async def m(app,msg):
 	   			return
 	
 
-@app.on_message(filters.command("تخمين","."))
-async def ks(app, msg):
+@app.on_message(filters.me & filters.command("تخمين","."))
+async def thmen(app, msg):
     	bbk = "1234567890"
     	km = "vip"
     	hs = random.choices(bbk)
