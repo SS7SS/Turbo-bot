@@ -477,7 +477,28 @@ async def m(app,msg):
 	   			sed.append("run")
 	   			return
 	
-	   		
+
+@app.on_message(filters.command("تخمين","."))
+async def ks(app, msg):
+    	bbk = "1234567890"
+    	km = "vip"
+    	hs = random.choices(bbk)
+    	hson = [km[0], hs[0], hs[0], hs[0]]
+    	userbam = "".join(hson)
+    	kmbe = await ac.get_users(userbam)
+    	if "UserStatus.LONG_AGO" in kmbe:
+    		await app.send_message(msg.chat.id, "جار تخمين يوزر جديد يرجى الانتضار لمده 3 ثواني")
+    		while True :
+    			
+    			await asyncio.sleep(1)
+    			msg.edit("①")
+    			await asyncio.sleep(1)
+    			msg.edit("②")
+    			await asyncio.sleep(1)
+    			msg.edit("③")
+    			await app.send_message(msg.chat.id, f"@{hson}\n{kmbe.next_offline_date}")
+    		
+			  
 
 app.run()
 print("شغال")
